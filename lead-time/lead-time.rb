@@ -16,52 +16,7 @@ repo = Repo.new(repo_dir: repo_dir, production_branch_name: production_branch_na
 repo.load_deployment_times
 
 
-QUERY = GitHub::Client.parse <<-'GRAPHQL'
-query($owner: String!, $name: String!, $after: String) {
-  repository(owner: $owner, name: $name) {
-    pullRequests(first: 100, states: [MERGED], orderBy: {field: UPDATED_AT, direction: DESC}, after: $after) {
-      edges {
-        cursor
-        node {
-          number
-          permalink
-          title
-          author {
-            login
-          }
-          baseRefName
-          createdAt
-          closed
-          closedAt
-          merged
-          mergedAt
-          mergeCommit {
-            oid
-          }
-        }
-      }
-    }
-  }
-}
-GRAPHQL
-
-
-pull_requests = []
-after = nil
-
-loop do
-  variables = {
-    owner: repo_owner,
-    name: repo_name,
-    after: after,
-  }
-  response = GitHub::Client.query(QUERY, variables: variables, context: {})
-
-  new_pull_requests = response.data.repository.pull_requests.edges.map(&:node)
-  break if new_pull_requests.empty?
-  pull_requests += new_pull_requests
-  after = response.data.repository.pull_requests.edges.last.cursor
-  puts "#{pull_requests.size} #{new_pull_requests.size} #{after}"
-end
+github = GitHub.new(repo_owner: repo_owner, repo_name: repo_name)
+pull_requests = github.load_pull_requests(debug: true)
 
 binding.irb
