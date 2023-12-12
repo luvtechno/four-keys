@@ -21,4 +21,6 @@ See https://github.com/libgit2/rugged#mac
 
 ## References
 
-- https://www.rubydoc.info/github/libgit2/rugged/
+- https://libgit2.org/
+- https://libgit2.org/libgit2/#HEAD libgit2 reference
+- https://www.rubydoc.info/github/libgit2/rugged/ libgit2 ruby binding
