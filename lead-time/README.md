@@ -23,4 +23,6 @@ See https://github.com/libgit2/rugged#mac
 
 - https://libgit2.org/
 - https://libgit2.org/libgit2/#HEAD libgit2 reference
-- https://www.rubydoc.info/github/libgit2/rugged/ libgit2 ruby binding
+- https://www.rubydoc.info/github/libgit2/rugged/ rugged gem, libgit2 ruby binding
+- https://graphql-ruby.org/ graphql gem
+- https://github.com/github/graphql-client graphql-client gem
