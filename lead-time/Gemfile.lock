@@ -2,12 +2,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     dotenv (2.8.1)
+    rugged (1.7.1)
 
 PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
   dotenv
+  rugged
 
 BUNDLED WITH
    2.4.19
