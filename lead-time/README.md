@@ -7,8 +7,9 @@ Change lead time is one of measures to assess software delivery performance, kno
 
 ## Prprerequisites
 
-You'll need libgit2, which rugged gem internally uses.
+### libgit2
 
+You'll need libgit2, which rugged gem internally uses.
 
 On Mac, run the following command if `bundle install` fails:
 
@@ -17,6 +18,10 @@ brew install cmake pkg-config
 ```
 
 See https://github.com/libgit2/rugged#mac
+
+### GitHub Personal Access Token
+
+https://github.com/settings/tokens?type=beta
 
 
 ## References
