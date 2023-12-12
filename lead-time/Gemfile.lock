@@ -18,8 +18,7 @@ GEM
     dotenv (2.8.1)
     drb (2.2.0)
       ruby2_keywords
-    graphql (2.1.7)
-      racc (~> 1.4)
+    graphql (2.0.27)
     graphql-client (0.18.0)
       activesupport (>= 3.0)
       graphql
@@ -27,7 +26,6 @@ GEM
       concurrent-ruby (~> 1.0)
     minitest (5.20.0)
     mutex_m (0.2.0)
-    racc (1.7.3)
     ruby2_keywords (0.0.5)
     rugged (1.7.1)
     tzinfo (2.0.6)
@@ -38,7 +36,8 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
-  graphql-client
+  graphql (= 2.0.27)
+  graphql-client (= 0.18.0)
   rugged
 
 BUNDLED WITH
