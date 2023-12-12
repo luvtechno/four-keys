@@ -17,3 +17,8 @@ brew install cmake pkg-config
 ```
 
 See https://github.com/libgit2/rugged#mac
+
+
+## References
+
+- https://www.rubydoc.info/github/libgit2/rugged/
