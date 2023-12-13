@@ -18,6 +18,7 @@ class GitHub
     execute: HTTPAdapter,
   )
 
+  # https://docs.github.com/en/graphql/overview/explorer
   QUERY = GitHub::Client.parse <<~'GRAPHQL'
   query($owner: String!, $name: String!, $after: String) {
     repository(owner: $owner, name: $name) {
