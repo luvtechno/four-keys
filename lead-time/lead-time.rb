@@ -45,10 +45,10 @@ CSV.open(output_file, 'w', headers: headers, write_headers: true) do |csv|
       pr.title,
       pr.author.login,
       pr.base_ref_name,
-      created_at,
-      merged_at,
+      created_at.strftime("%Y-%m-%d %H:%M:%S"),
+      merged_at&.strftime("%Y-%m-%d %H:%M:%S"),
       pr.merge_commit.oid,
-      deployed_at,
+      deployed_at&.strftime("%Y-%m-%d %H:%M:%S"),
       lead_time,
     ]
   end
